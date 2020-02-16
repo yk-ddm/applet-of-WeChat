@@ -1,0 +1,50 @@
+.container {
+	border-top: 1rpx solid #e0e0e0;
+}
+.header ,
+.todos ,
+.footer {
+	margin: 20rpx;
+	padding: 20rpx;
+	border: 1rpx solid #e0e0e0;
+	border-radius: 10rpx;
+	box-shadow: 0 0 5rpx #e0e0e0;
+}
+.header {
+	display: flex;
+	align-items: center;
+}
+.header image {
+	width: 40rpx;
+	height: 40rpx;
+	margin-right: 20rpx;
+}
+.todos {
+	padding: 0;
+}
+.todos .item {
+	display: flex;
+	align-items: center;
+	padding: 20rpx;
+	border-bottom: 1rpx solid #e0e0e0;
+}
+.todos .item icon {
+	padding: 20rpx;
+}
+.todos .item:nth-child(3) {
+	border-bottom: 0;
+}
+.todos .item text {
+	flex: 1;
+	color: #444;
+	font-size: 30rpx;
+}
+.todos .completed text {
+	text-decoration: line-through;
+}
+.footer {
+	display: flex;
+	justify-content: space-between;
+	color: #333;
+	font-size: 30rpx;
+}

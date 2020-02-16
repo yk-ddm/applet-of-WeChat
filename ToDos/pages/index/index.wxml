@@ -1,0 +1,20 @@
+<view class="container">
+	<view class="header">
+		<image src="../../images/plus.png" bindtap="addTodoHandle"></image>
+		<input type="text" placeholder="请输入TODOS文本" value="{{ textValue }}" bindinput="textChange" bindconfirm="completedSubmit" />
+	</view>
+	<block wx:if="{{ isShow }}">
+		<view class="todos">
+			<view class="item{{ item.completed ? ' completed' : '' }}" wx:key wx:for = "{{ todos }}" bindtap="toggleTask" data-index="{{ index }}">
+				<icon type="{{ item.completed ? 'success' : 'circle'}}"></icon>
+				<text>{{ item.name }}</text>
+				<icon type="clear" size="16" catchtap="deleteTask" data-index="{{ index }}"></icon>
+			</view>
+		</view>
+		<view class="footer">
+			<text bindtap="allElection">全选</text>
+			<text wx:if = "{{ count }}">未完成内容条目剩余{{ count }}个</text>
+			<text bindtap="cleanItem">清空</text>
+		</view>
+	</block>
+</view>
